@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<BorderPane fx:id="mainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rooq37.controllers.PlayerController">
+   <bottom>
+      <VBox fx:id="toolsVBox" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="currentTimeLabel" text="Label" />
+                  <Slider fx:id="progressSlider" focusTraversable="false" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="durationLabel" text="Label" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="buttonsHBox" alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#onActionPreviousSegmentButton">
+                     <tooltip>
+                        <Tooltip text="- 10 sec." />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-media-skip-backward"/>
+                     </graphic>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#onActionPreviousSubtitleButton">
+                     <tooltip>
+                        <Tooltip text="Previous subtitle" />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-indent-decrease"/>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="playButton" focusTraversable="false" mnemonicParsing="false" onAction="#onActionPlayPauseButton">
+                     <tooltip>
+                        <Tooltip text="Play" />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-media-play"/>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="pauseButton" focusTraversable="false" mnemonicParsing="false" onAction="#onActionPlayPauseButton">
+                     <tooltip>
+                        <Tooltip text="Pause" />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-media-pause"/>
+                     </graphic>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#onActionNextSubtitleButton">
+                     <tooltip>
+                        <Tooltip text="Next subtitle" />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-indent-increase"/>
+                     </graphic>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#onActionNextSegmentButton">
+                     <tooltip>
+                        <Tooltip text="+ 10 sec." />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-media-skip-forward"/>
+                     </graphic>
+                  </Button>
+                  <ChoiceBox fx:id="rateChoiceBox" focusTraversable="false">
+                     <tooltip>
+                        <Tooltip text="Video speed" />
+                     </tooltip></ChoiceBox>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#onActionFullscreenButton">
+                     <tooltip>
+                        <Tooltip text="Fullscreen" />
+                     </tooltip>
+                     <graphic>
+                        <FontIcon iconLiteral="cil-fullscreen"/>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="360.0" fitWidth="640.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </MediaView>
+            <BorderPane>
+               <bottom>
+                  <TextArea fx:id="bottomSubtitlesTextArea" editable="false" prefColumnCount="1" prefRowCount="1" stylesheets="@player.css" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </TextArea>
+               </bottom>
+               <top>
+                  <TextArea fx:id="topSubtitlesTextArea" editable="false" prefColumnCount="1" prefRowCount="1" stylesheets="@player.css" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </TextArea>
+               </top>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,41 @@
+1
+00:00:04,560 --> 00:00:06,720
+<font color="#ffffff">Subs one.</font>
+
+2
+00:00:06,720 --> 00:00:09,320
+<font color="#ffffff">Subs two.</font>
+
+3
+00:00:09,320 --> 00:00:12,040
+<font color="#ffffff">Subs three.</font>
+
+4
+00:00:12,040 --> 00:00:13,680
+<font color="#ffffff">Subs four.</font>
+
+5
+00:00:13,680 --> 00:00:18,320
+<font color="#ffffff">Subs five</font><font color="#ffff00"> part one</font>
+<font color="#ffffff">subs five</font><font color="#ffff00"> part two.</font>
+
+6
+00:00:18,320 --> 00:00:21,600
+<font color="#ffffff">Subs six.</font>
+
+7
+00:00:21,600 --> 00:00:24,240
+<font color="#ffffff">Subs seven</font><font color="#ffff00"> part one</font>
+<font color="#ffffff">subs seven</font><font color="#ffff00"> part two.</font>
+
+8
+00:00:24,240 --> 00:00:26,000
+<font color="#ffffff">Subs eight.</font>
+
+9
+00:00:26,000 --> 00:00:27,600
+<font color="#ffffff">Subs nine.</font>
+
+10
+00:00:27,600 --> 00:00:29,320
+<font color="#ffffff">Subs ten.</font>
